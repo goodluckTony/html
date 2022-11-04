@@ -1,16 +1,105 @@
+<!-- інструкція для браузера, яка оголошує тип документа  -->
 <!DOCTYPE html>
+
+<!-- контейнер для усієї веб-сторінки -->
 <html lang="en">
+<!-- призначений для зберігання службової інформації -->
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+  <!-- спец елементи, допомагають браузеру та пошуковим системам зрозуміти, що це за сайт -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- заголовок сторінки, відображається на вкладці браузера -->
+  <title>Document</title>
+
 </head>
+  <!-- являє собою вміст веб-сторінки, відображається у вікні браузера -->
+  <body>
 
-<body>
-    <h1>Hello HTML</h1>
-    <img width="250" src="img/flowers_1.png" alt="flower">
-</body>
+    <!-- вступний контент, як правило, навігаційних елементів -->
+    <header style="background-color:blue; display: flex">
+      <!-- тег для відображення зображень -->
+      <img width="100" height="100" src="img/flowers_1.png" alt="flower">
+      <!-- h1 - заголовок 1го рівня, має пояснювати/описувати розділ, 
+      щоб сторінка правильно шукалась запитами,
+      семантично має бути одним у розділі, решта ієрархічно у низ, до h6-->
+      <h1 style="display: flex; align-items: center; color: aliceblue; margin-left: 3rem; ">Hello HTML</h1>
+    </header>
 
+    <!-- призначений для основного контенту, 
+    який розвиває головну тему сайту -->
+    <main>
+      <!-- заголовок 2го рівня, назва будь якого блоку, може бути більше одного -->
+      <h2 class="red-text">CatPhotoApp</h2>
+      <div  style="display:flex">
+      <!-- блочний елемент, універсальний контейнер для койнтенту,
+      так само ним можна розділяти усі блоки, та під-блоки -->
+      <div>
+        <!-- блочний елемент для тексту -->
+        <p class="red-text">Click here to view more <a href="#">cat photos</a>.</p>
+        <!-- призначений для створення посилань, ним можна огортати деякі теги,
+        щоб зробити певний елемент - посиланням, як нижче у випадку з картинкою -->
+        <a href="#"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+        alt="A cute orange cat lying on its back."></a>
+      </div>
+
+      <div>
+        <!-- блочний елемент для тексту, кожен новий йду з абзацу-->
+        <p>Things cats love:</p>
+        <!-- невпорядкований список, починається з окремого елемента - li,  -->
+        <ul>
+          <!-- елемент списку -->
+          <li>cat nip</li>
+          <li>laser pointers</li>
+          <li>lasagna</li>
+        </ul>
+        <p>Top 3 things cats hate:</p>
+        <!-- впорядкований список, так само, як і ul, починається з li -->
+        <ol>
+          <li>flea treatment</li>
+          <li>thunder</li>
+          <li>other cats</li>
+        </ol>
+  
+        <!-- парний елемент, використовується для створення форм, 
+        щоб прийняти інформацію від користувача та відправити її на сервер,
+        огортає такі теги, як:
+        input,textarea,button,select,option,optgroup,label,legend-->
+        <form action="https://freecatphotoapp.com/submit-cat-photo">
+          <label for="cat-names">Chose a cat name:</label>
+          <select name="cat-names" id="">
+            <option value="">Cheesy</option>
+            <option value="">Bob</option>
+            <option value="">Bat</option>
+          </select>
+          <br>
+          <br>
+          <label><input type="radio" name="indoor-outdoor" checked>Indoor</label>
+          <label><input type="radio" name="indoor-outdoor">Outdoor</label>
+          <br>
+          <label><input type="checkbox" name="personality" checked>Loving</label>
+          <label><input type="checkbox" name="personality">Lazy</label>
+          <label><input type="checkbox" name="personality">Energetic</label><br>
+          <input type="text" placeholder="cat photo URL" required>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      </div>
+      
+    </main>
+    
+    <!-- останній блок, який виділяє інфо про авторські права, 
+    контактні дані, посилання для навігації -->
+    <footer style="background-color:yellow; display: flex; align-items: flex-end;
+    justify-content: space-evenly;">
+        <p>Co @ Qwerty. All rights reserved.</p>
+        <ul>
+          <li>Головна</li>
+          <li>Контакти</li>
+          <li>Про нас</li>
+        </ul>
+    </footer>
+  </body>
 </html>
